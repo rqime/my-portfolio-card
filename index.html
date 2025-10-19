@@ -5,30 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Card</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1>開米圭祐のプロフィール</h1>
-        </header>
-        <article class="Card">
-            <img src="20240907_224015copy.jpg" alt="プロフィール画像">
-            <h2>開米圭祐</h2>
-            <p>配送業をしており、現在プログラミング勉強中<br>HTML,CSS,Linux,Pythonの勉強をしています。</p>
-            <section class="links">
-                <h3>リンク一覧</h3>
-                <ul>
-                    <li><a href="#">Github</a></li>
-                    <li><a href="#">X(Twitter)</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </section>
-        </article>
+    <header class="site-header">
+        <nav class="nav" aria-label="メインナ">
+            <a class="logo" href="#">MyCard</a>
+            <ul class="nav_list">
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#works">作品</a></li>
+                <li><a href="#contact">連絡先</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h1 class="visually-hidden">開米圭祐のプロフィール</h1>
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">自己紹介</h2>
+            <p>バックエンド学習中。LinuxやGit運用強化中です。</p>
+        </section>
+        <section id="works" aria-labelledby="works-title">
+            <h2 id="works-title">作品</h2>
+            <article class="work" aria-labelledby="works-title">
+                <h3 id="work1-title">CSS Card UI</h3>
+                <p>名刺カードのコンポーネント。ホバーで浮く演出。</p>
+            </article>
+        </section>
     </main>
-    <footer>
-        <p>@ 2025 開米圭祐 Protfolio Card</p>
+    <footer class="site-footer" id="contact">
+        <h2 class="visually-hidden">フッター</h2>
+        <address>連絡先:<a href="mailto:kimikisk@gmail.com">kimikisk@gmail.com</a></address>
+        <small>@ 2025 My Portfolio Card</small>
     </footer>
 </body>
 
