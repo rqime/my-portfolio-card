@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Card</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Card</title>
+  <!-- ※CSSファイル名は styles.css に統一。style.css があるならリネームしてね -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header class="site-header">
-        <nav class="nav" aria-label="メインナ">
-            <a class="logo" href="#">MyCard</a>
-            <ul class="nav_list">
-                <li><a href="#about">自己紹介</a></li>
-                <li><a href="#works">作品</a></li>
-                <li><a href="#contact">連絡先</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
-        <h1 class="visually-hidden">開米圭祐のプロフィール</h1>
-        <section id="about" aria-labelledby="about-title">
-            <h2 id="about-title">自己紹介</h2>
-            <p>バックエンド学習中。LinuxやGit運用強化中です。</p>
-        </section>
-        <section id="works" aria-labelledby="works-title">
-            <h2 id="works-title">作品</h2>
-            <article class="work" aria-labelledby="works-title">
-                <h3 id="work1-title">CSS Card UI</h3>
-                <p>名刺カードのコンポーネント。ホバーで浮く演出。</p>
-            </article>
-        </section>
-    </main>
-    <footer class="site-footer" id="contact">
-        <h2 class="visually-hidden">フッター</h2>
-        <address>連絡先:<a href="mailto:kimikisk@gmail.com">kimikisk@gmail.com</a></address>
-        <small>@ 2025 My Portfolio Card</small>
-    </footer>
-</body>
+  <header class="site-header">
+    <nav class="nav" aria-label="メインナビ">
+      <a class="logo" href="#">MyCard</a>
+      <ul class="nav__list">
+        <li><a href="#about">自己紹介</a></li>
+        <li><a href="#works">作品</a></li>
+        <li><a href="#contact">連絡先</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main class="main" id="main">
+    <!-- ページの h1 は1回だけ（視覚的には非表示） -->
+    <h1 class="visually-hidden">開米圭祐のプロフィール</h1>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">自己紹介</h2>
+      <p>バックエンド学習中。LinuxやGit運用を強化中です。</p>
+    </section>
+
+    <section id="works" aria-labelledby="works-title">
+      <h2 id="works-title">作品</h2>
+      <article class="work" aria-labelledby="work1-title">
+        <h3 id="work1-title">CSS Card UI</h3>
+        <p>名刺カードのコンポーネント。ホバーで浮く演出。</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <h2 class="visually-hidden">フッター</h2>
+    <address>連絡先: <a href="mailto:kimikisk@gmail.com">kimikisk@gmail.com</a></address>
+    <small>© 2025 My Portfolio Card</small>
+  </footer>
+</body>
 </html>
