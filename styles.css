@@ -1,77 +1,82 @@
-/*cssの初期化*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* cssの初期化 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* html, body はコンマ区切り（セレクタのタイプミス注意） */
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', 'Hiragino Kaku Gothic ProN', system-ui, -apple-system,
+               BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+               'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  padding: 40px 0;
 }
 
-html body {
-    height: 100%;
-    font-family: 'Segoe UI', 'Hiragino kaku Gothic ProN', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: white;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 40px 0;
+/* ナビ（クラス名は nav__list に統一） */
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.nav__list a {
+  text-decoration: none;
+  color: #4f46e5;
+  font-weight: 600;
 }
 
-.Card {
-    background-color: #fff;
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* カード（BEM/ケバブで .card に統一） */
+.card {
+  background-color: #fff;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+.card img {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #4f46e5;
+}
+/* p に list-style は不要（誤記削除） */
+.card p {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
 }
 
-.Card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 16px;
+/* リンク一覧（あなたのHTMLが <ul class="links"> … の想定） */
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
-
-.Card h2 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    color: #4f46e5;
-}
-
-.Card p {
-    font-size: 0.9rem;
-    list-style: none;
-    padding: 0;
-    margin-bottom: 16px;
-}
-
-.links ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 0;
-}
-
 .links a {
-    color: #4f46e5;
-    text-decoration: none;
-    font-weight: bold;
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: bold;
 }
+.links a:hover { text-decoration: underline; }
 
-.links a:hover {
-    text-decoration: underline;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    overflow: hidden;
-    white-space: nowrap;
+/* アクセシビリティ用ユーティリティ */
+.visually-hidden{
+  position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0;
+  clip:rect(0 0 0 0); clip-path:inset(50%); overflow:hidden; white-space:nowrap;
 }
